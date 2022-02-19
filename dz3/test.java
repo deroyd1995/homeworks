@@ -69,10 +69,13 @@ public class test {
 
         //result[j]=charArray[j];
         //Arrays.deepToString(result);
+        if (result[6]=='\u0000'){
+            System.out.println("asd");
+        }
 
-        Arrays.toString(result);
         //result = result.replace("\u0000", "");
-        System.out.println(result);
+        String strresult = String.valueOf(result);
+        System.out.println(strresult.replace("\u0000", ""));
 
     }
 }
