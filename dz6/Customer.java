@@ -15,6 +15,8 @@ public class Customer extends AbstractUser implements Comparable<Customer>{
         return userID;
     }
 
+    EncryptDecrypt encryptdecrypt = new EncryptDecrypt();
+
     public Customer(String FIO, String login, String password, String telnumber, String userID) {
         super(login,password);
         this.FIO = FIO;
@@ -43,6 +45,6 @@ public class Customer extends AbstractUser implements Comparable<Customer>{
 
     @Override
     public String toString() {
-        return getFIO() + "," + getLogin() + "," + getPassword() + "," + getTelnumber()+","+getUserID();
+        return getFIO() + "," + getLogin() + "," + encryptdecrypt.encrypt(getPassword()) + "," + getTelnumber()+","+getUserID();
     }
 }
