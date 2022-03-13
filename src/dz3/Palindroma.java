@@ -96,10 +96,9 @@ public class Palindroma {
 
        //точка входа
         public static void main(String[] args) {
-            String testing = "ооофывоыфоойуойцоараоурурурурафоао";  //тестируемая строка
+            String testing = "ооофывоуйуцйуыфоойуойцоараоурурурурафоаоооофывоуйуцйуыфоойуойцоараоурурурурафоаоооофывоуйуцйуыфоойуойцоараоурурурурафоао";  //тестируемая строка
 
-            System.out.printf("--- Является ли палиндромом строка '"+"%s"+"' : %b",testing,isPalindrom(testing));
-            System.out.println();
+            System.out.printf("--- Является ли палиндромом строка '"+"%s"+"' : %b %n",testing,isPalindrom(testing));
             System.out.println("--- Палиндром максимальной длины: "+findPalindroms(testing));
 
         }

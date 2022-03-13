@@ -25,6 +25,8 @@ public class WriteFile {
 
 
             // add data to csv
+            String[] data1={"FIO","login","password","telephone","id"};
+            writer.writeNext(data1);
             for (Customer s:customers){
                 String[] data = s.toString().split(",");
                 writer.writeNext(data);
