@@ -1,4 +1,4 @@
-<div style="background-color:black; color:white;width:400px;border:5px solid green;padding:35px;">
+<div style="color:white">
 
 # HOMEWORKS 
 ### Выполненные домашние задания:
