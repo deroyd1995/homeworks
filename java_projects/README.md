@@ -1,6 +1,6 @@
 <div style="color:white">
 
-# HOMEWORKS 
+# Java projects 
 ### Выполненные домашние задания:
 
 <b>
@@ -10,7 +10,6 @@
 - [x] dz3 - Палиндромы :five:
 - [x] dz4 - Ученики        :five:
 - [x] dz6 - Интернет-магазин :five:
-- [ ] dz7 - Maven-проект
 
 </b>
 
