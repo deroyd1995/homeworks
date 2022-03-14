@@ -1,9 +1,0 @@
-"FIO","login","password","telephone","id"
-<<<<<<< HEAD:java_projects/customers.csv
-"Александров Сергей Владимирович","qweq","TnWy99i3vlAZrI5G71XduA==","+7(343)5829246","0f538117-9f6d-4ef0-84d7-a95e225d05cf"
-"Кошлакйов Никита Сергеевич","nikita","ehIMwLtPpJnENbk2DK1lVg==","+7964582-92-46","a8fce464-1703-40af-b0c1-453920ca2628"
-=======
-"Александров Сергей Владимирович","qweq","TnWy99i3vlAZrI5G71XduA==","+7(343)5829246","e16ac6a3-0737-4b03-b0de-94b574b278ec"
-"Кошлакйов Никита Сергеевич","nikita","ehIMwLtPpJnENbk2DK1lVg==","+7964582-92-46","041176da-967f-4e3b-b85c-41be3bb7c545"
->>>>>>> 54d4a44ccb488ea1ea3babc07e71b48592b5e154:projects_java/customers.csv
-
