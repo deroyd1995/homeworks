@@ -1,9 +1,7 @@
 package tests;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInfo;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -14,6 +12,7 @@ import static org.junit.Assert.assertTrue;
 
 public class PenGetColorTest extends BaseTest {
     @Test
+    @Disabled
     public void PenGetColorBasicColorTest(){
         Pen pen = new Pen();
         String expectedResult = "BLUE";
@@ -22,6 +21,7 @@ public class PenGetColorTest extends BaseTest {
     }
 
     @Test
+    @Tag("checkbd")
     public void PenGetColorTest(){
         Pen pen = new Pen("RED");
         String expectedResult = "RED";
