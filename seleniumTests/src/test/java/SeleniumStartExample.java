@@ -1,16 +1,10 @@
-import io.netty.handler.codec.http.multipart.DiskFileUpload;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxDriverLogLevel;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.awt.image.RenderedImage;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
@@ -36,7 +30,7 @@ public class SeleniumStartExample {
     private static final String closeAd = "//div[@class=\"modal__close\"]";
 
     @BeforeEach
-    public void setUp() throws java.util.concurrent.TimeoutException {
+    public void setUp() throws TimeoutException {
         System.setProperty("webdriver.gecko.driver","src\\test\\resources\\geckodriver.exe");
         System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
         webDriver = new FirefoxDriver();
@@ -52,6 +46,7 @@ public class SeleniumStartExample {
     }
 
     @Test
+    @Tag("Other")
     public void freeTest(){
         System.out.println("success");
     }
@@ -59,17 +54,19 @@ public class SeleniumStartExample {
 
     @Test
     @DisplayName("Find the best motivators")
+    @Tag("Weather")
     public void findBestMotivatorTest() throws InterruptedException{
         Assertions.assertTrue(webDriver.findElement(By.xpath(YANDEX_LOGO)).isDisplayed());
         webDriver.findElement(By.xpath(inputField)).sendKeys("лучшие мотиваторы");
         webDriver.findElement(By.xpath(find_button)).click();
-        WebElement firstResult = new WebDriverWait(webDriver, Duration.ofSeconds(18))
+        WebElement firstResult = new WebDriverWait(webDriver, Duration.ofSeconds(10))
         .until(ExpectedConditions.elementToBeClickable(By.xpath(resultList)));
         System.out.println("Motivators found successfully");
     }
 
     @Test
     @DisplayName("Get today temperature")
+    @Tag("Weather")
     public void findCurrentTemperatureTest(){
         String todayTemperature;
         todayTemperature = webDriver.findElement(By.xpath(currentTemperature)).getText();
@@ -78,15 +75,12 @@ public class SeleniumStartExample {
 
     @Test
     @DisplayName("Get tomorrow temperature")
+    @Tag("Weather")
     public void findTomorrowTemperatureTest() throws InterruptedException, IOException{
-        //String oldTab = webDriver.getWindowsHandle();
         String TomorrowTemperature;
         WebElement webElement = webDriver.findElement(By.xpath(WEATHER));
         webElement.click();
         TimeUnit.SECONDS.sleep(5);
-        //ArrayList<String> newTab - new ArrayList<String>(webDriver.getWindowHandles());
-        //newTab.remove(oldTab);
-        //webDriver.switchTo().window(newTab.get(0));
 
         for (String windowHandle : webDriver.getWindowHandles()){
             webDriver.switchTo().window(windowHandle);
@@ -97,6 +91,7 @@ public class SeleniumStartExample {
         copy(scrFile , new File("src\\test\\resources\\screenshot.png"));
 
 
+        //Getting cropped weather image
         //reading image
         BufferedImage  fullImg = ImageIO.read(scrFile);
 
