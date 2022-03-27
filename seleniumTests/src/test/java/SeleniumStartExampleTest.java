@@ -45,6 +45,7 @@ public class SeleniumStartExampleTest {
         catch(TimeoutException e){e.printStackTrace();};
     }
 
+
     @Test
     @Tag("Other")
     public void freeTest(){

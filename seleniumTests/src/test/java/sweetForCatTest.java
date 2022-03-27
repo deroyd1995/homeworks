@@ -1,13 +1,18 @@
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.EnumSource;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.coordinates.WebDriverCoordsProvider;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Timestamp;
@@ -17,42 +22,61 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.openqa.selenium.io.FileHandler.copy;
+import static org.openqa.selenium.support.ui.ExpectedConditions.attributeToBe;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class sweetForCatTest {
     private WebDriver webDriver;
 
     //constants
-    private static final SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss"); //формат метки времени для результатов
+    private static final String driverType = "webdriver.gecko.driver";
+    private static final String driverPath = "src\\test\\resources\\geckodriver.exe";
     private static final String baseUrl = "https://yandex.ru/";
-    private static final int duration = 10; //время ожидания
-    private static final int timeout = 5;   //время на таймауты
-    public int priceFromValue = 50;
-    public int priceToValue = 150;
-    public String deliveryMethod = "Доставка курьером";
+    private static final SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss"); //формат метки времени для результатов
+    private static final int duration = 15; //время ожидания, сек
+    private static final int timeout = 5;   //время на таймауты, сек
+    public int priceFromValue = 50; // цена от,₽
+    public int priceToValue = 150;  // цена до,₽
+    public static final String screenShotsPath = "src\\test\\resources\\";
+    public String deliveryMethod = "Доставка курьером"; // варианты: "Самовывоз", "Доставка курьером", "Любой"
+    enum manufacturers {Whiskas,Sheba,Titbit,AlpenHof;}
 
     //locators
     private static final String closeAd = "//div[@class=\"modal__close\"]";
     private static final String market = "//div[text()='Маркет']";
+
     private static final String catalogue = "//button[@aria-label='Каталог']";
     private static final String catalogueResult = "//ul[@class='_2OFlF']";
+
     private static final String zootovari = "//span[text()='Зоотовары']/ancestor::a";
     private static final String zootovariLabel = "//a[text()='Зоотовары']";
+
     private static final String sweetForCat = "//a[text()='Для кошек']/ancestor::div[1]/ancestor::div[1]//a[text()='Лакомства']";
-    private static final String sweetForCatLabel = "//h1[text()='Лакомства для кошек']";
+    private static final String sweetForCatLabel = "//div[@data-grabber='SearchTitle']//h1[text()='Лакомства для кошек']";
+
     private static final String priceFromField = "//input[@id='glpricefrom']";
     private final String priceFromFieldAndValue = "//input[@id='glpricefrom' and @value='"+priceFromValue+"']";
     private static final String priceToField = "//input[@id='glpriceto']";
     private final String priceToFieldAndValue = "//input[@id='glpriceto' and @value='"+priceToValue+"']";
     private final String priceSetTab = "//legend[text()='Цена, ₽']/ancestor::fieldset";
 
+    private final String deliveryMethodRadioB = "//legend[text()='Способ доставки']/ancestor::fieldset[1]//span[text()='"+deliveryMethod+"']/ancestor::label[1]//input";
+    private final String deliveryMethodLabel = "//legend[text()='Способ доставки']/ancestor::fieldset[1]//span[text()='"+deliveryMethod+"']";
+    private final String deliveryMethodTab = "//legend[text()='Способ доставки']/ancestor::fieldset";
+
+    private final String showAllManufacturers = "//legend[text()='Производитель']/ancestor::fieldset[1]//button[text()='Показать всё']";
+    private final String searchManufacturerField = "//input[@name='Поле поиска']";
+    private final String manufacturerTab = "//legend[text()='Производитель']/ancestor::div[@data-zone-name='search-filter']";
+
+    private final String productImage = "//a[@data-node-name='picture']";
+    private final String productCompare = "//div[@data-node-name='comparison']//div";
 
     @BeforeEach
     public void setUp() throws TimeoutException {
-        System.setProperty("webdriver.gecko.driver","src\\test\\resources\\geckodriver.exe");
+        System.setProperty(driverType,driverPath);
         System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
         webDriver = new FirefoxDriver();
-        System.out.println(" Driver was started");
+        System.out.println("Driver was started");
         webDriver.get(baseUrl);
         webDriver.manage().window().maximize();
         try{
@@ -61,6 +85,17 @@ public class sweetForCatTest {
             webDriver.findElement(By.xpath(closeAd)).click();
         }
         catch(TimeoutException e){System.out.println("Рекламное окно в этот раз не появилось");}
+    }
+
+    //метод для создания скриншота по xpath элемента, сохраняет с именем name и по пути screenShotsPath
+    public void takeScreenShotPNG(String xpath, String name) throws IOException{
+        WebElement logo = webDriver.findElement(By.xpath(xpath));
+
+        Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
+                .coordsProvider(new WebDriverCoordsProvider())
+                .takeScreenshot(webDriver, logo);
+
+        ImageIO.write(screenshot.getImage(), "png", new File(screenShotsPath+name));
     }
 
 
@@ -141,11 +176,12 @@ public class sweetForCatTest {
         System.out.println(timeFormat.format(timestamp)+" Followed link sweets for cat successfully");
     }
 
-    @Test
+    @ParameterizedTest
+    @EnumSource(manufacturers.class)
     @Order(6)
     @DisplayName("Setting up filters")
     @Tag("SweetForCat")
-    public void setUpFilters() throws InterruptedException, IOException {
+    public void setUpFilters(manufacturers manufacturer) throws InterruptedException, IOException {
         followSweetsForCat();
 
         //проверяем, что поля цен присутствуют на форме
@@ -162,37 +198,75 @@ public class sweetForCatTest {
         new WebDriverWait(webDriver, Duration.ofSeconds(duration))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath(priceToFieldAndValue)));
 
-        File ScrPriceSet = ((TakesScreenshot)webDriver).getScreenshotAs(OutputType.FILE);
-        //Getting cropped weather image
-        //reading image
-        BufferedImage fullImg = ImageIO.read(ScrPriceSet);
-
-        // Get the location of element on the page
-        WebElement webElement = webDriver.findElement(By.xpath(priceSetTab));
-        Point point = webElement.getLocation();
-
-        // Get width and height of the element
-        int eleWidth = webElement.getSize().getWidth();
-        int eleHeight = webElement.getSize().getHeight();
-
-        // Crop the entire page screenshot to get only element screenshot
-        BufferedImage eleScreenshot= fullImg.getSubimage(point.getX(), point.getY(),
-                eleWidth, eleHeight);
-        ImageIO.write(eleScreenshot, "png", ScrPriceSet);
-        File screenshotLocation = new File("src\\test\\resources\\screenshots\\priceset.png");
-        copy(ScrPriceSet, screenshotLocation);
-
-
+        takeScreenShotPNG(priceSetTab,"priceset.png");
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        System.out.println(timeFormat.format(timestamp)+" Set up filters successfully");
-    }
+        System.out.println(timeFormat.format(timestamp)+"   set up price");
+
+        //проверяем, что задан требуемый метод доставки (самовывоз/курьер/любой)
+        new WebDriverWait(webDriver, Duration.ofSeconds(duration))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath(deliveryMethodLabel)));
+        webDriver.findElement(By.xpath(deliveryMethodLabel)).click();
+        new WebDriverWait(webDriver, Duration.ofSeconds(duration))
+                .until(ExpectedConditions.elementToBeSelected(By.xpath(deliveryMethodRadioB)));
+
+        takeScreenShotPNG(deliveryMethodTab,"deliverymethod.png");
+        timestamp = new Timestamp(System.currentTimeMillis());
+        System.out.println(timeFormat.format(timestamp)+"   set up delivery method");
+
+        //раскрываем список производителей
+        new WebDriverWait(webDriver, Duration.ofSeconds(duration))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath(showAllManufacturers)));
+        webDriver.findElement(By.xpath(showAllManufacturers)).click();
+
+        new WebDriverWait(webDriver, Duration.ofSeconds(duration))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath(searchManufacturerField)));
+        webDriver.findElement(By.xpath(searchManufacturerField)).sendKeys(String.valueOf(manufacturer));
+
+        //локаторы для линк-лейбла и для радио-кнопки (проверка статуса)
+        String manufacturerLabel = "//input[@name='Производитель "+manufacturer+"']/ancestor::label//span";
+        String manufacturerRadioB = "//input[@name='Производитель "+manufacturer+"']/ancestor::label//input";
+
+        new WebDriverWait(webDriver, Duration.ofSeconds(duration))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath(manufacturerLabel)));
+        WebElement webElement = webDriver.findElement(By.xpath(manufacturerLabel));
+
+        //проверка на то, что курсор не остался "по умолчанию" - стрелочкой (если стрелочка - нет предложений по фильтрам)
+        takeScreenShotPNG(manufacturerTab,"soloview_"+manufacturer+".png");
+        Assertions.assertFalse(webElement.getCssValue("cursor").equalsIgnoreCase("default"),"No products for such filters by "+manufacturer);
+        webDriver.findElement(By.xpath(manufacturerLabel)).click();
+
+        new WebDriverWait(webDriver, Duration.ofSeconds(duration))
+                .until(ExpectedConditions.elementToBeSelected(By.xpath(manufacturerRadioB)));
+
+        takeScreenShotPNG(manufacturerTab,"selected"+manufacturer+".png");
+        timestamp = new Timestamp(System.currentTimeMillis());
+        System.out.println(timeFormat.format(timestamp)+"   set up manufacturer");
+
+        //переход по первому товару и включение товара в список для сравнения
+        new WebDriverWait(webDriver, Duration.ofSeconds(duration))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath(productImage)));
+        webDriver.findElement(By.xpath(productImage)).click();
+
+        for (String windowHandle : webDriver.getWindowHandles()){
+            webDriver.switchTo().window(windowHandle);
+        }
+
+        new WebDriverWait(webDriver, Duration.ofSeconds(duration))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath(productCompare)));
+        webDriver.findElement(By.xpath(productCompare)).click();
+
+        File scrFile = ((TakesScreenshot)webDriver).getScreenshotAs(OutputType.FILE);
+        copy(scrFile , new File(screenShotsPath+"result.png"));
+        timestamp = new Timestamp(System.currentTimeMillis());
+        System.out.println(timeFormat.format(timestamp)+" Product was added to comparison successfully");
+   }
 
 
 
     @AfterEach
     public void tearDown(){
-        System.out.println("Driver was shutdown successfully");
         webDriver.quit();
+        System.out.println("Driver was shutdown successfully");
     }
 
 

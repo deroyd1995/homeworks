@@ -2,8 +2,11 @@
 
 # SELENIUM 
 ### Выполненные домашние задания:
+##### SeleniumStartExampleTest - пример урока (с изменениями)
+##### sweetForCatTest - dz1
 
 <b>
+
 
 - [ ] dz1 - Перейти на https://market.yandex.ru и выбрать корм для кошки
 
