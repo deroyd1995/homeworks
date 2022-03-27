@@ -13,7 +13,7 @@ import org.openqa.selenium.TimeoutException;
 
 import static org.openqa.selenium.io.FileHandler.copy;
 
-public class SeleniumStartExample {
+public class SeleniumStartExampleTest {
     private WebDriver webDriver;
 
     private static final String baseUrl = "https://yandex.ru/";
@@ -42,7 +42,7 @@ public class SeleniumStartExample {
                     .until(ExpectedConditions.elementToBeClickable(By.xpath(closeAd)));
             webDriver.findElement(By.xpath(closeAd)).click();
         }
-        catch(TimeoutException e){};
+        catch(TimeoutException e){e.printStackTrace();};
     }
 
     @Test
