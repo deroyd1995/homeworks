@@ -70,6 +70,7 @@ public class sweetForCatTest {
 
     private final String productImage = "//a[@data-node-name='picture']";
     private final String productCompare = "//div[@data-node-name='comparison']//div";
+    private final String productCompareLabel = "//div[@data-node-name='comparison']//span";
 
     @BeforeEach
     public void setUp() throws TimeoutException {
@@ -168,6 +169,10 @@ public class sweetForCatTest {
         WebElement webElement = webDriver.findElement(By.xpath(sweetForCat));
         webElement.click();
 
+        for (String windowHandle : webDriver.getWindowHandles()){
+            webDriver.switchTo().window(windowHandle);
+        }
+
         //проверяем, что перешли в нужный раздел каталога
         new WebDriverWait(webDriver, Duration.ofSeconds(duration))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(sweetForCatLabel)));
@@ -228,17 +233,17 @@ public class sweetForCatTest {
 
         new WebDriverWait(webDriver, Duration.ofSeconds(duration))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath(manufacturerLabel)));
-        WebElement webElement = webDriver.findElement(By.xpath(manufacturerLabel));
 
         //проверка на то, что курсор не остался "по умолчанию" - стрелочкой (если стрелочка - нет предложений по фильтрам)
         takeScreenShotPNG(manufacturerTab,"soloview_"+manufacturer+".png");
+        WebElement webElement = webDriver.findElement(By.xpath(manufacturerLabel));
         Assertions.assertFalse(webElement.getCssValue("cursor").equalsIgnoreCase("default"),"No products for such filters by "+manufacturer);
         webDriver.findElement(By.xpath(manufacturerLabel)).click();
 
         new WebDriverWait(webDriver, Duration.ofSeconds(duration))
                 .until(ExpectedConditions.elementToBeSelected(By.xpath(manufacturerRadioB)));
 
-        takeScreenShotPNG(manufacturerTab,"selected"+manufacturer+".png");
+        takeScreenShotPNG(manufacturerTab,"selected_"+manufacturer+".png");
         timestamp = new Timestamp(System.currentTimeMillis());
         System.out.println(timeFormat.format(timestamp)+"   set up manufacturer");
 
@@ -254,9 +259,11 @@ public class sweetForCatTest {
         new WebDriverWait(webDriver, Duration.ofSeconds(duration))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath(productCompare)));
         webDriver.findElement(By.xpath(productCompare)).click();
+        new WebDriverWait(webDriver, Duration.ofSeconds(duration))
+                .until(ExpectedConditions.textToBe(By.xpath(productCompareLabel),"В сравнении"));
 
         File scrFile = ((TakesScreenshot)webDriver).getScreenshotAs(OutputType.FILE);
-        copy(scrFile , new File(screenShotsPath+"result.png"));
+        copy(scrFile , new File(screenShotsPath+manufacturer+"_result.png"));
         timestamp = new Timestamp(System.currentTimeMillis());
         System.out.println(timeFormat.format(timestamp)+" Product was added to comparison successfully");
    }
