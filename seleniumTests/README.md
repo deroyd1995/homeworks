@@ -2,8 +2,8 @@
 
 # SELENIUM 
 ### Выполненные домашние задания:
-##### SeleniumStartExampleTest - пример урока (с изменениями)
-##### sweetForCatTest - dz1
+##### deprecated.SeleniumStartExampleTest - пример урока (с изменениями)
+##### deprecated.sweetForCatTest - dz1
 
 <b>
 
