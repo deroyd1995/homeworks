@@ -4,11 +4,14 @@
 ### Выполненные домашние задания:
 ##### deprecated.SeleniumStartExampleTest - пример урока (с изменениями)
 ##### deprecated.sweetForCatTest - dz1
+##### tests.SeleniumTests - dz2
 
 <b>
 
 
 -[x] dz1 - Перейти на https://market.yandex.ru и выбрать корм для кошки по фильтрам
+-[x] dz2 - Отрефакторить dz1 и добавить разделение на классы по страницам
+
 
 </b>
 
