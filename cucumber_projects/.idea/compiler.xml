@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mvnsimple" />
+        <module name="FirstCucumber" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="mvnsimple" target="17" />
+      <module name="FirstCucumber" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mvnsimple.iml" filepath="$PROJECT_DIR$/mvnsimple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FirstCucumber.iml" filepath="$PROJECT_DIR$/FirstCucumber.iml" />
     </modules>
   </component>
 </project>
