@@ -30,6 +30,11 @@
       <artifactId>cucumber-core</artifactId>
       <version>${cucumber.java.version}</version>
     </dependency>
+    <dependency>
+      <groupId>com.codeborne</groupId>
+      <artifactId>selenide</artifactId>
+      <version>6.3.2</version>
+    </dependency>
   </dependencies>
 
   <build>
