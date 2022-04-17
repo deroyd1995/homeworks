@@ -25,4 +25,10 @@ public class MyStepdefs {
         YandexMainPage yandexMainPage = new YandexMainPage();
         yandexMainPage.goToPage(page);
     }
+
+    @Дано("Выполняем запрос по теме {string}")
+    public void searchTheme(String theme){
+        YandexMainPage yandexMainPage = new YandexMainPage();
+        yandexMainPage.searchInYandex(theme);
+    }
 }

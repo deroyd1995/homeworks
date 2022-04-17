@@ -4,7 +4,10 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import static com.codeborne.selenide.Selenide.$x;
@@ -41,6 +44,13 @@ public class YandexMainPage {
         }
 
 
+    }
+
+    public void searchInYandex (String expression){
+        INPUT_FIELD.shouldBe(Condition.enabled).sendKeys(expression);
+        FIND_BUTTON.shouldBe(Condition.enabled).click();
+        RESULT_LIST.shouldBe(Condition.enabled);
+        System.out.println("Поиск '"+expression+"' в Яндексе успешно произведён");
     }
 
 }
