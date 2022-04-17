@@ -26,20 +26,21 @@ public class YandexMainPage {
     }
 
     public void goToPage(String pageName){
-        SelenideElement xpath = $x("");
-        String pageTitle = "";
 
         if(pageName == "Маркет"){
-            xpath = MARKET;
-            pageTitle = "Интернет-магазин Яндекс.Маркет — покупки с быстрой доставкой";
+            SelenideElement xpath = MARKET;
+            String pageTitle = "Интернет-магазин Яндекс.Маркет — покупки с быстрой доставкой";
+            xpath.shouldBe(Condition.enabled).click();
+            switchTo().window(pageTitle);
         }
         else if (pageName == "Погода"){
-            xpath = WEATHER;
-            pageTitle = "Прогноз погоды в Якутске на 10 дней — Яндекс.Погода";
+            SelenideElement xpath = WEATHER;
+            String pageTitle = "Прогноз погоды в Якутске на 10 дней — Яндекс.Погода";
+            xpath.shouldBe(Condition.enabled).click();
+            switchTo().window(pageTitle);
         }
 
-        xpath.shouldBe(Condition.enabled).click();
-        switchTo().window(pageTitle);
+
     }
 
 }

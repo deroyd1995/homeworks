@@ -12,6 +12,8 @@ public class MyStepdefs {
             yandexMainPage.getCurrentTemp();
         }
         else {
+            YandexMainPage yandexMainPage = new YandexMainPage();
+            yandexMainPage.goToPage("Погода");
             YandexWeatherPage yandexWeatherPage = new YandexWeatherPage();
             yandexWeatherPage.getNextDayTemp(day);
         }
