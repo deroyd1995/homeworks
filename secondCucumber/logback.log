@@ -45,3 +45,14 @@
 4957 21:49:02.238 [main] INFO  t1.steps.MyStepdefs - Температура получена
 5162 21:52:45.343 [main] INFO  t1.steps.MyStepdefs - Запрошена погода на сегодня
 5197 21:52:45.378 [main] INFO  t1.steps.MyStepdefs - Температура получена
+5112 22:18:06.039 [main] INFO  t1.steps.MyStepdefs - Запрошена погода на сегодня
+5144 22:18:06.071 [main] INFO  t1.steps.MyStepdefs - Температура получена
+5018 22:27:44.127 [main] INFO  t1.steps.MyStepdefs - Запрошена погода на сегодня
+5054 22:27:44.163 [main] INFO  t1.steps.MyStepdefs - Температура получена
+7203 22:30:29.028 [main] INFO  t1.steps.MyStepdefs - Запрошена погода на сегодня
+7283 22:30:29.108 [main] INFO  t1.steps.MyStepdefs - Температура получена
+6689 22:39:20.588 [main] INFO  t1.steps.MyStepdefs - Осуществлён переход на страницу 'Погода'
+6706 22:39:20.605 [main] INFO  t1.steps.MyStepdefs - Запрошена погода на послезавтра
+6706 22:39:20.605 [main] INFO  t1.pages.YandexMainPage - Начат переход на Яндекс.Погода
+9705 22:39:23.604 [main] INFO  t1.pages.YandexMainPage - послезавтра температура +4°
+9705 22:39:23.604 [main] INFO  t1.steps.MyStepdefs - Температура получена

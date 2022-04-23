@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import static t1.steps.Conditions.DURATION;
-import static t1.steps.Conditions.SLEEP;
 
 public class YandexMainPage extends BasePage{
 
