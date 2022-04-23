@@ -2,14 +2,6 @@ package t1.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.switchTo;
 
@@ -25,7 +17,7 @@ public class YandexMainPage {
 
     public void getCurrentTemp (){
         String todayTemperature = CURRENT_TEMP.shouldBe(Condition.visible).getText();
-        System.out.println("Today is "+todayTemperature);
+        System.out.println("Сегодня температура "+todayTemperature);
     }
 
     public void goToPage(String pageName){
@@ -50,7 +42,6 @@ public class YandexMainPage {
         INPUT_FIELD.shouldBe(Condition.enabled).sendKeys(expression);
         FIND_BUTTON.shouldBe(Condition.enabled).click();
         RESULT_LIST.shouldBe(Condition.enabled);
-        System.out.println("Поиск '"+expression+"' в Яндексе успешно произведён");
     }
 
 }

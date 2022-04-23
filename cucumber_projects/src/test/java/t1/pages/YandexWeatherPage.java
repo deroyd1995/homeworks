@@ -21,13 +21,16 @@ public class YandexWeatherPage {
 
     public Integer getDayIndex(String day){
         if (day.equalsIgnoreCase("завтра")){
-            return 2;
-        }
-        else if(day.equalsIgnoreCase("послезавтра")){
             return 3;
         }
+        else if(day.equalsIgnoreCase("послезавтра")){
+            return 4;
+        }
+        else if(day.equalsIgnoreCase("вчера")){
+            return 1;
+        }
         else {
-            return 1; //вчера
+            return 2; //сегодня
         }
     }
 }
