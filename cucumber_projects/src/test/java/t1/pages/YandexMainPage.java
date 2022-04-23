@@ -2,10 +2,15 @@ package t1.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.switchTo;
 
 public class YandexMainPage {
+
+    private static final Logger logger = LoggerFactory.getLogger(YandexMainPage.class);
     //LOCATORS
     public static final SelenideElement YANDEX_LOGO = $x("//div[@aria-label='Яндекс']");
     public static final SelenideElement INPUT_FIELD = $x("//input[@aria-label='Запрос']");
@@ -17,18 +22,20 @@ public class YandexMainPage {
 
     public void getCurrentTemp (){
         String todayTemperature = CURRENT_TEMP.shouldBe(Condition.visible).getText();
-        System.out.println("Сегодня температура "+todayTemperature);
+        logger.info("Сегодня температура "+todayTemperature);
     }
 
     public void goToPage(String pageName){
 
         if(pageName == "Маркет"){
+            logger.info("Начат переход на Яндекс.Маркет");
             SelenideElement xpath = MARKET;
             String pageTitle = "Интернет-магазин Яндекс.Маркет — покупки с быстрой доставкой";
             xpath.shouldBe(Condition.enabled).click();
             switchTo().window(pageTitle);
         }
         else if (pageName == "Погода"){
+            logger.info("Начат переход на Яндекс.Погода");
             SelenideElement xpath = WEATHER;
             String pageTitle = "Прогноз погоды в Якутске на 10 дней — Яндекс.Погода";
             xpath.shouldBe(Condition.enabled).click();
@@ -39,6 +46,7 @@ public class YandexMainPage {
     }
 
     public void searchInYandex (String expression){
+        logger.info("Начат поиск по теме");
         INPUT_FIELD.shouldBe(Condition.enabled).sendKeys(expression);
         FIND_BUTTON.shouldBe(Condition.enabled).click();
         RESULT_LIST.shouldBe(Condition.enabled);

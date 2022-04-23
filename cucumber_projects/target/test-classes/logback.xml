@@ -1,10 +1,15 @@
 <configuration>
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logback.log</file>
+        <append>true</append>
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <pattern>%-4relative %d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n</pattern>
         </encoder>
     </appender>
-    <root level="debug">
-        <appender-ref ref="STDOUT" />
+    <logger name="t1.steps.MyStepdefs" level="DEBUG" />
+    <logger name="t1.pages.YandexWeatherPage" level="INFO" />
+    <logger name="t1.pages.YandexMainPage" level="INFO" />
+    <root level="warn">
+        <appender-ref ref="FILE" />
     </root>
 </configuration>

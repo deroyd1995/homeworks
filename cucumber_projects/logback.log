@@ -1,0 +1,4 @@
+7519 19:36:25.156 [main] INFO  t1.steps.MyStepdefs - Осуществлён поиск по теме 'мотиваторы'
+8505 19:37:36.011 [main] INFO  t1.steps.MyStepdefs - Осуществлён поиск по теме 'мотиваторы'
+5224 19:38:12.129 [main] INFO  t1.pages.YandexMainPage - Начат поиск по теме
+6694 19:38:13.599 [main] INFO  t1.steps.MyStepdefs - Осуществлён поиск по теме 'мотиваторы'

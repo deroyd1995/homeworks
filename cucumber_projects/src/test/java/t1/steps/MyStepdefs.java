@@ -8,7 +8,7 @@ import t1.pages.YandexWeatherPage;
 
 public class MyStepdefs {
 
-    private static final Logger logger = (Logger) LoggerFactory.getLogger(MyStepdefs.class);
+    private static final Logger logger = LoggerFactory.getLogger(MyStepdefs.class);
 
 
     @Дано("Получить прогноз погоды на {string}")
