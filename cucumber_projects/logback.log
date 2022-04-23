@@ -2,3 +2,17 @@
 8505 19:37:36.011 [main] INFO  t1.steps.MyStepdefs - Осуществлён поиск по теме 'мотиваторы'
 5224 19:38:12.129 [main] INFO  t1.pages.YandexMainPage - Начат поиск по теме
 6694 19:38:13.599 [main] INFO  t1.steps.MyStepdefs - Осуществлён поиск по теме 'мотиваторы'
+6581 20:08:54.381 [main] INFO  t1.pages.YandexMainPage - Начат поиск по теме
+8253 20:08:56.053 [main] INFO  t1.steps.MyStepdefs - Осуществлён поиск по теме 'мотиваторы'
+5645 20:41:51.074 [main] INFO  t1.pages.YandexMainPage - Сегодня температура −6°
+5647 20:41:51.076 [main] INFO  t1.steps.MyStepdefs - Запрошена погода на сегодня
+10358 20:41:55.787 [main] INFO  t1.steps.MyStepdefs - Осуществлён переход на страницу 'Погода'
+10358 20:41:55.787 [main] INFO  t1.pages.YandexMainPage - Начат переход на Яндекс.Погода
+12245 20:41:57.674 [main] INFO  t1.pages.YandexMainPage - завтра температура +3°
+12245 20:41:57.674 [main] INFO  t1.steps.MyStepdefs - Запрошена погода на завтра
+18380 20:42:03.809 [main] INFO  t1.steps.MyStepdefs - Осуществлён переход на страницу 'Погода'
+18380 20:42:03.809 [main] INFO  t1.pages.YandexMainPage - Начат переход на Яндекс.Погода
+19803 20:42:05.232 [main] INFO  t1.pages.YandexMainPage - послезавтра температура +4°
+19803 20:42:05.232 [main] INFO  t1.steps.MyStepdefs - Запрошена погода на послезавтра
+26187 20:42:11.616 [main] INFO  t1.pages.YandexMainPage - Начат поиск по теме
+27528 20:42:12.957 [main] INFO  t1.steps.MyStepdefs - Осуществлён поиск по теме 'мотиваторы'
