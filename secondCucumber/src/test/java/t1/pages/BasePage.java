@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 
 public abstract class BasePage {
     public static final Logger logger = LoggerFactory.getLogger(YandexMainPage.class);
-    protected WebDriver webDriver;
+    public WebDriver webDriver;
     public BasePage() {
         this.webDriver = Browser.getInstance().getWebDriver();
     }

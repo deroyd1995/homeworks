@@ -7,6 +7,8 @@
         </encoder>
     </appender>
     <logger name="t1.steps.MyStepdefs" level="DEBUG" />
+    <logger name="t1.framework.Browser" level="INFO" />
+    <logger name="t1.framework.BrowserFactory" level="INFO" />
     <logger name="t1.pages.YandexWeatherPage" level="INFO" />
     <logger name="t1.pages.YandexMainPage" level="INFO" />
     <root level="warn">
