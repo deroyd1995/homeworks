@@ -3,28 +3,26 @@ package t1.steps;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import t1.core.PageCatalog;
 import t1.framework.Browser;
 
 public class Conditions {
+    private static final String baseURL = "https://yandex.ru";
 
-    public static final Logger logger = LoggerFactory.getLogger(Conditions.class);
-    private static final String baseURL = "https://yandex.ru/";
-    public static final int DURATION = 15; //время ожидания, сек
-    public static final int SLEEP = 5;     //время сна, сек
-    public WebDriver driver = Browser.getInstance().getWebDriver();
+    public static WebDriver driver = Browser.getInstance().getWebDriver();
+
+    public static PageCatalog pageCatalog;
+
 
     @Before
-    public void setUp(){
-        logger.debug("Открываем заданный baseURL");
+    public void setUp() {
         Browser.open(baseURL);
-        logger.debug("Масштабируем окно");
         driver.manage().window().maximize();
+        pageCatalog = new PageCatalog();
     }
+
     @After
-    public void tearDown(){
-        logger.debug("Вызываем метод закрытия браузера");
+    public void tearDown() {
         Browser.quit();
     }
 }
