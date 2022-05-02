@@ -31,18 +31,32 @@ public class CurrentSteps {
         logger.debug(String.format("Переменная контекста %s со страницы %s сохранена",param,pageName));
     }
 
-    @Дано("пользователь на странице {string} находит элемент {string} в коллекции {string}, общий локатор {string}")
-    public void isElementPresentedInCollection(String pageName, String name, String collectionOfItems,String sameLocator){
+    @Дано("пользователь на странице {string} находит элемент {string} в коллекции {string}, общий локатор {string} и {string}")
+    public void isElementPresentedInCollection(String pageName, String name, String collectionOfItems,String sameLocator, String Action){
         logger.info("Начинается поиск элемента на странице");
         if (pageCatalog.IsElementInCollection(pageCatalog.getPageByName(pageName).getElementByName(collectionOfItems),
                 pageCatalog.getPageByName(pageName).getElementXpath(sameLocator),
-                name, String.format("Нет ни одного элемента в %s", collectionOfItems)))
+                name, String.format("Нет ни одного элемента в %s", collectionOfItems),Action))
         {
             logger.info("Элемент найден");
             logger.debug(String.format("%s найден на странице %s",name,pageName));
         }
 
         else logger.error("Элемент не найден");
+    }
+
+    @Дано("пользователь на странице {string} проверяет, что все элементы из одной коллекции {string} принадлежат одному бренду {string} и имеют общий локатор {string}")
+    public void areAllElementFromSameCollection(String pageName, String collectionOfItems,String name,String sameLocator){
+        logger.info("Начинается поиск элемента на странице");
+        if (pageCatalog.AreAllElementsFromSameCollection(pageCatalog.getPageByName(pageName).getElementByName(collectionOfItems),
+                pageCatalog.getPageByName(pageName).getElementXpath(sameLocator),
+                name, String.format("Нет ни одного элемента в %s", collectionOfItems)))
+        {
+            logger.info("Все элементы принадлежат одной коллекции бренда");
+            logger.debug(String.format("Все элементы коллекции %s принадлежат одному бренду %s",collectionOfItems,name));
+        }
+
+        else {throw new Error("Найден элемент не из коллекции бренда");}
     }
 
     @Дано("пользователь на странице {string} ожидает элемент {string}")
@@ -142,7 +156,7 @@ public class CurrentSteps {
     @SneakyThrows
     @Дано("дебаг")
     public void debug() {
-        pageCatalog.sleep(1000);
+        pageCatalog.sleep(5000);
        // Thread.sleep(5000);
     }
 

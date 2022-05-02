@@ -1,6 +1,7 @@
 package t1.pages;
 
 import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -32,7 +33,7 @@ public abstract class BasePage {
         PageFactory.initElements(webDriver, this);
     }
 
-    public boolean IsElementInCollection(WebElement collectionOfItems, String xpathItem, String name,String errorMessage) {
+    public boolean IsElementInCollection(WebElement collectionOfItems, String xpathItem, String name,String errorMessage,String Action) {
         int countItems = Integer.parseInt(collectionOfItems.getDomProperty("childElementCount"));
 
         if (countItems == 0){
@@ -41,11 +42,51 @@ public abstract class BasePage {
         String textItem = "";
         for (int i=1;i<=countItems;i++){
             textItem = webDriver.findElement(By.xpath(xpathItem+"["+i+"]")).getText();
-            if (textItem.equals(name)){
+            if (textItem.equalsIgnoreCase(name)){
+                logger.info("требуемый бренд найден");
+                if (Action.equalsIgnoreCase("кликает")){
+                    logger.info("пользователь кликает по бренду");
+                    try {webDriver.findElement(By.xpath(xpathItem+"["+i+"]//div")).click();}
+                    catch (Exception e){
+                        fail(e.getMessage());
+                    }
+                }
+                else {
+                    logger.info("пользователь не кликает по бренду");
+                }
                 return true;
             }
         }
         return false;
+    }
+
+    public boolean AreAllElementsFromSameCollection(WebElement collectionOfItems, String xpathItem, String name,String errorMessage){
+        int countItems = Integer.parseInt(collectionOfItems.getDomProperty("childElementCount"));
+        if (countItems == 0){
+            fail(errorMessage);
+        }
+        String textItem = "";
+        int pos=0;
+        try {
+            for (int i=1;i<=countItems;i++){
+                pos+=1;
+                textItem = webDriver.findElement(By.xpath(xpathItem + "[" + i + "]")).getText();
+                if (textItem.toLowerCase().contains(name.toLowerCase())) {
+                    logger.debug(String.format("Найден элемент %s из коллекции бренда %s",textItem,name));
+                    if (i == countItems) {
+                        return true;
+                    }
+                } else {
+                    logger.error(String.format("Найден элемент %s не из коллекции бренда %s",textItem,name));
+                    return false;
+                }
+            }
+
+         }
+        catch (NoSuchElementException e){
+            logger.debug(String.format("В коллекции было обнаружено %s элементов, но элемент на позиции %s не предметы каталога",countItems,pos));
+        }
+        return true;
     }
 
     public boolean waitForElementNotPresent(WebElement element, String errorMessage, long timeoutInSeconds) {

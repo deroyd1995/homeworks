@@ -1,43 +1,277 @@
-2413 15:50:44.390 [main] INFO  t1.framework.Browser - webDriver был инициирован
-8426 15:50:50.403 [main] INFO  t1.steps.CurrentSteps - Пользователь вводит текст
-8427 15:50:50.404 [main] ERROR t1.framework.BrowserFactory - Не заполнен каталог страниц.
-2369 15:51:46.959 [main] INFO  t1.framework.Browser - webDriver был инициирован
-6129 15:51:50.719 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
-7803 15:51:52.393 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главная страница Amazon кликнул на элемент Главное меню
-7807 15:51:52.397 [main] INFO  t1.steps.CurrentSteps - Пользователь проверяет, что элемент активен
-8850 15:51:53.440 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon удостоверился, что элемент Раздел электроники активен
-8851 15:51:53.441 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
-8920 15:51:53.510 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Раздел электроники
-8921 15:51:53.511 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
-8963 15:51:53.553 [main] DEBUG t1.steps.CurrentSteps - Элемент Результат поиска: электроника на странице Главное меню Amazon появился
-8963 15:51:53.553 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
-9614 15:51:54.204 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Наушники
-9615 15:51:54.205 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
-10402 15:51:54.992 [main] DEBUG t1.steps.CurrentSteps - Элемент Поиск по разделу: на странице Результаты поиска Amazon появился
-10403 15:51:54.993 [main] INFO  t1.steps.CurrentSteps - Сохранение переменной контекста
-11674 15:51:56.264 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: со страницы Результаты поиска Amazon сохранена
-11675 15:51:56.265 [main] INFO  t1.steps.CurrentSteps - Сравнение переменной из контекста с ожидаемым результатом
-11678 15:51:56.268 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: равна ожидаемому результату Audio Headphones
-12678 15:51:57.268 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
-12716 15:51:57.306 [main] INFO  t1.steps.CurrentSteps - Элемент найден
-12716 15:51:57.306 [main] DEBUG t1.steps.CurrentSteps - Apple найден на странице Результаты поиска Amazon
-2392 15:52:42.809 [main] INFO  t1.framework.Browser - webDriver был инициирован
-7697 15:52:48.114 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
-9409 15:52:49.826 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главная страница Amazon кликнул на элемент Главное меню
-9413 15:52:49.830 [main] INFO  t1.steps.CurrentSteps - Пользователь проверяет, что элемент активен
-10458 15:52:50.875 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon удостоверился, что элемент Раздел электроники активен
-10459 15:52:50.876 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
-10531 15:52:50.948 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Раздел электроники
-10532 15:52:50.949 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
-10575 15:52:50.992 [main] DEBUG t1.steps.CurrentSteps - Элемент Результат поиска: электроника на странице Главное меню Amazon появился
-10576 15:52:50.993 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
-11235 15:52:51.652 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Наушники
-11236 15:52:51.653 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
-12159 15:52:52.576 [main] DEBUG t1.steps.CurrentSteps - Элемент Поиск по разделу: на странице Результаты поиска Amazon появился
-12160 15:52:52.577 [main] INFO  t1.steps.CurrentSteps - Сохранение переменной контекста
-12191 15:52:52.608 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: со страницы Результаты поиска Amazon сохранена
-12192 15:52:52.609 [main] INFO  t1.steps.CurrentSteps - Сравнение переменной из контекста с ожидаемым результатом
-12195 15:52:52.612 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: равна ожидаемому результату Audio Headphones
-13197 15:52:53.614 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
-13761 15:52:54.178 [main] INFO  t1.steps.CurrentSteps - Элемент найден
-13761 15:52:54.178 [main] DEBUG t1.steps.CurrentSteps - Apple найден на странице Результаты поиска Amazon
+
+103  18:39:49.912 [main] DEBUG t1.framework.BrowserFactory - Возвращаем chromedriver
+1959 18:39:51.768 [main] INFO  t1.framework.Browser - webDriver был инициирован
+4783 18:39:54.592 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+6460 18:39:56.269 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главная страница Amazon кликнул на элемент Главное меню
+6461 18:39:56.270 [main] INFO  t1.steps.CurrentSteps - Пользователь проверяет, что элемент активен
+7514 18:39:57.323 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon удостоверился, что элемент Раздел электроники активен
+7515 18:39:57.324 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+7583 18:39:57.392 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Раздел электроники
+7584 18:39:57.393 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+7624 18:39:57.433 [main] DEBUG t1.steps.CurrentSteps - Элемент Результат поиска: электроника на странице Главное меню Amazon появился
+7624 18:39:57.433 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+8395 18:39:58.204 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Наушники
+8396 18:39:58.205 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+10153 18:39:59.962 [main] DEBUG t1.steps.CurrentSteps - Элемент Поиск по разделу: на странице Результаты поиска Amazon появился
+10153 18:39:59.962 [main] INFO  t1.steps.CurrentSteps - Сохранение переменной контекста
+10185 18:39:59.994 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: со страницы Результаты поиска Amazon сохранена
+10185 18:39:59.994 [main] INFO  t1.steps.CurrentSteps - Сравнение переменной из контекста с ожидаемым результатом
+10189 18:39:59.998 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: равна ожидаемому результату Audio Headphones
+10189 18:39:59.998 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+10227 18:40:00.036 [main] INFO  t1.framework.BrowserFactory - требуемый бренд найден
+10227 18:40:00.036 [main] INFO  t1.framework.BrowserFactory - пользователь кликает по бренду
+11837 18:40:01.646 [main] INFO  t1.steps.CurrentSteps - Элемент найден
+11837 18:40:01.646 [main] DEBUG t1.steps.CurrentSteps - Apple найден на странице Результаты поиска Amazon
+11837 18:40:01.646 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+11895 18:40:01.704 [main] DEBUG t1.framework.BrowserFactory - no such element: Unable to locate element: {"method":"xpath","selector":"//div[@data-component-type='s-search-result'][2]"}
+  (Session info: chrome=100.0.4896.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'DESKTOP-ADLEDIE', ip: '192.168.1.65', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_322'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0ffbe41b4f20a286e95e346c72fc8ca7, findElement {using=xpath, value=//div[@data-component-type='s-search-result'][2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\koshl\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49888}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49888/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0ffbe41b4f20a286e95e346c72fc8ca7
+11895 18:40:01.704 [main] INFO  t1.steps.CurrentSteps - Все элементы принадлежат одной коллекции бренда
+11895 18:40:01.704 [main] DEBUG t1.steps.CurrentSteps - Все элементы коллекции Коллекция предметов принадлежат одному бренду Apple
+104  18:48:05.290 [main] DEBUG t1.framework.BrowserFactory - Возвращаем chromedriver
+1960 18:48:07.146 [main] INFO  t1.framework.Browser - webDriver был инициирован
+5979 18:48:11.165 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+7654 18:48:12.840 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главная страница Amazon кликнул на элемент Главное меню
+7655 18:48:12.841 [main] INFO  t1.steps.CurrentSteps - Пользователь проверяет, что элемент активен
+8710 18:48:13.896 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon удостоверился, что элемент Раздел электроники активен
+8710 18:48:13.896 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+8780 18:48:13.966 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Раздел электроники
+8781 18:48:13.967 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+8821 18:48:14.007 [main] DEBUG t1.steps.CurrentSteps - Элемент Результат поиска: электроника на странице Главное меню Amazon появился
+8822 18:48:14.008 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+9542 18:48:14.728 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Наушники
+9542 18:48:14.728 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+10485 18:48:15.671 [main] DEBUG t1.steps.CurrentSteps - Элемент Поиск по разделу: на странице Результаты поиска Amazon появился
+10486 18:48:15.672 [main] INFO  t1.steps.CurrentSteps - Сохранение переменной контекста
+10513 18:48:15.699 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: со страницы Результаты поиска Amazon сохранена
+10513 18:48:15.699 [main] INFO  t1.steps.CurrentSteps - Сравнение переменной из контекста с ожидаемым результатом
+10517 18:48:15.703 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: равна ожидаемому результату Audio Headphones
+10517 18:48:15.703 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+10571 18:48:15.757 [main] INFO  t1.framework.BrowserFactory - требуемый бренд найден
+10571 18:48:15.757 [main] INFO  t1.framework.BrowserFactory - пользователь кликает по бренду
+12003 18:48:17.189 [main] INFO  t1.steps.CurrentSteps - Элемент найден
+12003 18:48:17.189 [main] DEBUG t1.steps.CurrentSteps - Apple найден на странице Результаты поиска Amazon
+12003 18:48:17.189 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+12059 18:48:17.245 [main] DEBUG t1.framework.BrowserFactory - В коллекции было обнаружено 4 элементов, но начиная с элемента на позиции 3 идут не предметы каталога
+12061 18:48:17.247 [main] DEBUG t1.framework.BrowserFactory - no such element: Unable to locate element: {"method":"xpath","selector":"//div[@data-component-type='s-search-result'][2]"}
+  (Session info: chrome=100.0.4896.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'DESKTOP-ADLEDIE', ip: '192.168.1.65', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_322'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b8b073a6658d77ccb004135b8d5cb414, findElement {using=xpath, value=//div[@data-component-type='s-search-result'][2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\koshl\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50349}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50349/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b8b073a6658d77ccb004135b8d5cb414
+12061 18:48:17.247 [main] INFO  t1.steps.CurrentSteps - Все элементы принадлежат одной коллекции бренда
+12061 18:48:17.247 [main] DEBUG t1.steps.CurrentSteps - Все элементы коллекции Коллекция предметов принадлежат одному бренду Apple
+109  18:50:49.470 [main] DEBUG t1.framework.BrowserFactory - Возвращаем chromedriver
+1969 18:50:51.330 [main] INFO  t1.framework.Browser - webDriver был инициирован
+6400 18:50:55.761 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+8125 18:50:57.486 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главная страница Amazon кликнул на элемент Главное меню
+8125 18:50:57.486 [main] INFO  t1.steps.CurrentSteps - Пользователь проверяет, что элемент активен
+9181 18:50:58.542 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon удостоверился, что элемент Раздел электроники активен
+9181 18:50:58.542 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+9249 18:50:58.610 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Раздел электроники
+9250 18:50:58.611 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+9291 18:50:58.652 [main] DEBUG t1.steps.CurrentSteps - Элемент Результат поиска: электроника на странице Главное меню Amazon появился
+9292 18:50:58.653 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+10036 18:50:59.397 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Наушники
+10037 18:50:59.398 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+11012 18:51:00.373 [main] DEBUG t1.steps.CurrentSteps - Элемент Поиск по разделу: на странице Результаты поиска Amazon появился
+11012 18:51:00.373 [main] INFO  t1.steps.CurrentSteps - Сохранение переменной контекста
+11040 18:51:00.401 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: со страницы Результаты поиска Amazon сохранена
+11041 18:51:00.402 [main] INFO  t1.steps.CurrentSteps - Сравнение переменной из контекста с ожидаемым результатом
+11044 18:51:00.405 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: равна ожидаемому результату Audio Headphones
+11045 18:51:00.406 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+11079 18:51:00.440 [main] INFO  t1.framework.BrowserFactory - требуемый бренд найден
+11079 18:51:00.440 [main] INFO  t1.framework.BrowserFactory - пользователь кликает по бренду
+12543 18:51:01.904 [main] INFO  t1.steps.CurrentSteps - Элемент найден
+12543 18:51:01.904 [main] DEBUG t1.steps.CurrentSteps - Apple найден на странице Результаты поиска Amazon
+12544 18:51:01.905 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+12602 18:51:01.963 [main] DEBUG t1.framework.BrowserFactory - В коллекции было обнаружено 4 элементов, но начиная с элемента на позиции 2 идут не предметы каталога
+12605 18:51:01.966 [main] DEBUG t1.framework.BrowserFactory - no such element: Unable to locate element: {"method":"xpath","selector":"//div[@data-component-type='s-search-result'][2]"}
+  (Session info: chrome=100.0.4896.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'DESKTOP-ADLEDIE', ip: '192.168.1.65', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_322'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e5324a9d2b4dd7f61e11570b2bfba559, findElement {using=xpath, value=//div[@data-component-type='s-search-result'][2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\koshl\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50582}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50582/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e5324a9d2b4dd7f61e11570b2bfba559
+12605 18:51:01.966 [main] INFO  t1.steps.CurrentSteps - Все элементы принадлежат одной коллекции бренда
+12605 18:51:01.966 [main] DEBUG t1.steps.CurrentSteps - Все элементы коллекции Коллекция предметов принадлежат одному бренду Apple
+106  18:54:42.486 [main] DEBUG t1.framework.BrowserFactory - Возвращаем chromedriver
+1973 18:54:44.353 [main] INFO  t1.framework.Browser - webDriver был инициирован
+7811 18:54:50.191 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+9497 18:54:51.877 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главная страница Amazon кликнул на элемент Главное меню
+9497 18:54:51.877 [main] INFO  t1.steps.CurrentSteps - Пользователь проверяет, что элемент активен
+10552 18:54:52.932 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon удостоверился, что элемент Раздел электроники активен
+10552 18:54:52.932 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+10622 18:54:53.002 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Раздел электроники
+10623 18:54:53.003 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+10667 18:54:53.047 [main] DEBUG t1.steps.CurrentSteps - Элемент Результат поиска: электроника на странице Главное меню Amazon появился
+10668 18:54:53.048 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+11405 18:54:53.785 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Наушники
+11406 18:54:53.786 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+13305 18:54:55.685 [main] DEBUG t1.steps.CurrentSteps - Элемент Поиск по разделу: на странице Результаты поиска Amazon появился
+13305 18:54:55.685 [main] INFO  t1.steps.CurrentSteps - Сохранение переменной контекста
+13339 18:54:55.719 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: со страницы Результаты поиска Amazon сохранена
+13340 18:54:55.720 [main] INFO  t1.steps.CurrentSteps - Сравнение переменной из контекста с ожидаемым результатом
+13343 18:54:55.723 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: равна ожидаемому результату Audio Headphones
+13344 18:54:55.724 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+13377 18:54:55.757 [main] INFO  t1.framework.BrowserFactory - требуемый бренд найден
+13377 18:54:55.757 [main] INFO  t1.framework.BrowserFactory - пользователь кликает по бренду
+15139 18:54:57.519 [main] INFO  t1.steps.CurrentSteps - Элемент найден
+15139 18:54:57.519 [main] DEBUG t1.steps.CurrentSteps - Apple найден на странице Результаты поиска Amazon
+15139 18:54:57.519 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+15195 18:54:57.575 [main] DEBUG t1.framework.BrowserFactory - В коллекции было обнаружено 4 элементов, но элемент на позиции 2 не предметы каталога
+15195 18:54:57.575 [main] INFO  t1.steps.CurrentSteps - Все элементы принадлежат одной коллекции бренда
+15195 18:54:57.575 [main] DEBUG t1.steps.CurrentSteps - Все элементы коллекции Коллекция предметов принадлежат одному бренду Apple
+104  18:56:15.988 [main] DEBUG t1.framework.BrowserFactory - Возвращаем chromedriver
+1963 18:56:17.847 [main] INFO  t1.framework.Browser - webDriver был инициирован
+4687 18:56:20.571 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+6397 18:56:22.281 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главная страница Amazon кликнул на элемент Главное меню
+6397 18:56:22.281 [main] INFO  t1.steps.CurrentSteps - Пользователь проверяет, что элемент активен
+7450 18:56:23.334 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon удостоверился, что элемент Раздел электроники активен
+7451 18:56:23.335 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+7521 18:56:23.405 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Раздел электроники
+7522 18:56:23.406 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+7561 18:56:23.445 [main] DEBUG t1.steps.CurrentSteps - Элемент Результат поиска: электроника на странице Главное меню Amazon появился
+7562 18:56:23.446 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+8275 18:56:24.159 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Наушники
+8276 18:56:24.160 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+10274 18:56:26.158 [main] DEBUG t1.steps.CurrentSteps - Элемент Поиск по разделу: на странице Результаты поиска Amazon появился
+10274 18:56:26.158 [main] INFO  t1.steps.CurrentSteps - Сохранение переменной контекста
+10303 18:56:26.187 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: со страницы Результаты поиска Amazon сохранена
+10303 18:56:26.187 [main] INFO  t1.steps.CurrentSteps - Сравнение переменной из контекста с ожидаемым результатом
+10306 18:56:26.190 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: равна ожидаемому результату Audio Headphones
+10307 18:56:26.191 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+10340 18:56:26.224 [main] INFO  t1.framework.BrowserFactory - требуемый бренд найден
+10340 18:56:26.224 [main] INFO  t1.framework.BrowserFactory - пользователь кликает по бренду
+11739 18:56:27.623 [main] INFO  t1.steps.CurrentSteps - Элемент найден
+11739 18:56:27.623 [main] DEBUG t1.steps.CurrentSteps - Apple найден на странице Результаты поиска Amazon
+11739 18:56:27.623 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+11785 18:56:27.669 [main] ERROR t1.framework.BrowserFactory - Найден элемент Amazon's Choice
+Apple AirPods (2nd Generation)
+491,323 не из коллекции бренда Samsung
+107  18:57:03.342 [main] DEBUG t1.framework.BrowserFactory - Возвращаем chromedriver
+1965 18:57:05.200 [main] INFO  t1.framework.Browser - webDriver был инициирован
+8614 18:57:11.849 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+10322 18:57:13.557 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главная страница Amazon кликнул на элемент Главное меню
+10322 18:57:13.557 [main] INFO  t1.steps.CurrentSteps - Пользователь проверяет, что элемент активен
+11379 18:57:14.614 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon удостоверился, что элемент Раздел электроники активен
+11379 18:57:14.614 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+11450 18:57:14.685 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Раздел электроники
+11450 18:57:14.685 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+11490 18:57:14.725 [main] DEBUG t1.steps.CurrentSteps - Элемент Результат поиска: электроника на странице Главное меню Amazon появился
+11491 18:57:14.726 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+12075 18:57:15.310 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Наушники
+12076 18:57:15.311 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+12864 18:57:16.099 [main] DEBUG t1.steps.CurrentSteps - Элемент Поиск по разделу: на странице Результаты поиска Amazon появился
+12864 18:57:16.099 [main] INFO  t1.steps.CurrentSteps - Сохранение переменной контекста
+12894 18:57:16.129 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: со страницы Результаты поиска Amazon сохранена
+12895 18:57:16.130 [main] INFO  t1.steps.CurrentSteps - Сравнение переменной из контекста с ожидаемым результатом
+12898 18:57:16.133 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: равна ожидаемому результату Audio Headphones
+12898 18:57:16.133 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+13198 18:57:16.433 [main] ERROR t1.steps.CurrentSteps - Элемент не найден
+13199 18:57:16.434 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+13257 18:57:16.492 [main] ERROR t1.framework.BrowserFactory - Найден элемент Amazon's Choice
+Apple AirPods (2nd Generation)
+491,323 не из коллекции бренда Samsung
+105  18:57:34.672 [main] DEBUG t1.framework.BrowserFactory - Возвращаем chromedriver
+1959 18:57:36.526 [main] INFO  t1.framework.Browser - webDriver был инициирован
+4756 18:57:39.323 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+6465 18:57:41.032 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главная страница Amazon кликнул на элемент Главное меню
+6466 18:57:41.033 [main] INFO  t1.steps.CurrentSteps - Пользователь проверяет, что элемент активен
+7520 18:57:42.087 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon удостоверился, что элемент Раздел электроники активен
+7521 18:57:42.088 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+7590 18:57:42.157 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Раздел электроники
+7591 18:57:42.158 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+7637 18:57:42.204 [main] DEBUG t1.steps.CurrentSteps - Элемент Результат поиска: электроника на странице Главное меню Amazon появился
+7637 18:57:42.204 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+8394 18:57:42.961 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Наушники
+8394 18:57:42.961 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+10242 18:57:44.809 [main] DEBUG t1.steps.CurrentSteps - Элемент Поиск по разделу: на странице Результаты поиска Amazon появился
+10242 18:57:44.809 [main] INFO  t1.steps.CurrentSteps - Сохранение переменной контекста
+10267 18:57:44.834 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: со страницы Результаты поиска Amazon сохранена
+10268 18:57:44.835 [main] INFO  t1.steps.CurrentSteps - Сравнение переменной из контекста с ожидаемым результатом
+10271 18:57:44.838 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: равна ожидаемому результату Audio Headphones
+10272 18:57:44.839 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+10336 18:57:44.903 [main] INFO  t1.framework.BrowserFactory - требуемый бренд найден
+10336 18:57:44.903 [main] INFO  t1.framework.BrowserFactory - пользователь кликает по бренду
+12127 18:57:46.694 [main] INFO  t1.steps.CurrentSteps - Элемент найден
+12127 18:57:46.694 [main] DEBUG t1.steps.CurrentSteps - SAMSUNG найден на странице Результаты поиска Amazon
+12127 18:57:46.694 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+12351 18:57:46.918 [main] ERROR t1.framework.BrowserFactory - Найден элемент AKG Noise Cancelling Headphones N60NC Wireless Bluetooth - Black - GP-N060HAHCAAA
+690 не из коллекции бренда SAMSUNG
+103  18:59:48.060 [main] DEBUG t1.framework.BrowserFactory - Возвращаем chromedriver
+1954 18:59:49.911 [main] INFO  t1.framework.Browser - webDriver был инициирован
+4881 18:59:52.838 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+6575 18:59:54.532 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главная страница Amazon кликнул на элемент Главное меню
+6576 18:59:54.533 [main] INFO  t1.steps.CurrentSteps - Пользователь проверяет, что элемент активен
+7630 18:59:55.587 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon удостоверился, что элемент Раздел электроники активен
+7630 18:59:55.587 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+7698 18:59:55.655 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Раздел электроники
+7698 18:59:55.655 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+7741 18:59:55.698 [main] DEBUG t1.steps.CurrentSteps - Элемент Результат поиска: электроника на странице Главное меню Amazon появился
+7741 18:59:55.698 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+8543 18:59:56.500 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Наушники
+8544 18:59:56.501 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+10499 18:59:58.456 [main] DEBUG t1.steps.CurrentSteps - Элемент Поиск по разделу: на странице Результаты поиска Amazon появился
+10500 18:59:58.457 [main] INFO  t1.steps.CurrentSteps - Сохранение переменной контекста
+10531 18:59:58.488 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: со страницы Результаты поиска Amazon сохранена
+10531 18:59:58.488 [main] INFO  t1.steps.CurrentSteps - Сравнение переменной из контекста с ожидаемым результатом
+10534 18:59:58.491 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: равна ожидаемому результату Audio Headphones
+10535 18:59:58.492 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+10589 18:59:58.546 [main] INFO  t1.framework.BrowserFactory - требуемый бренд найден
+10589 18:59:58.546 [main] INFO  t1.framework.BrowserFactory - пользователь кликает по бренду
+12353 19:00:00.310 [main] INFO  t1.steps.CurrentSteps - Элемент найден
+12353 19:00:00.310 [main] DEBUG t1.steps.CurrentSteps - Samsung найден на странице Результаты поиска Amazon
+12354 19:00:00.311 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+12554 19:00:00.511 [main] ERROR t1.framework.BrowserFactory - Найден элемент AKG Noise Cancelling Headphones N60NC Wireless Bluetooth - Black - GP-N060HAHCAAA
+690 не из коллекции бренда Samsung
+106  19:01:37.804 [main] DEBUG t1.framework.BrowserFactory - Возвращаем chromedriver
+1972 19:01:39.670 [main] INFO  t1.framework.Browser - webDriver был инициирован
+4804 19:01:42.502 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+6532 19:01:44.230 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главная страница Amazon кликнул на элемент Главное меню
+6533 19:01:44.231 [main] INFO  t1.steps.CurrentSteps - Пользователь проверяет, что элемент активен
+7587 19:01:45.285 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon удостоверился, что элемент Раздел электроники активен
+7587 19:01:45.285 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+7655 19:01:45.353 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Раздел электроники
+7656 19:01:45.354 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+7696 19:01:45.394 [main] DEBUG t1.steps.CurrentSteps - Элемент Результат поиска: электроника на странице Главное меню Amazon появился
+7697 19:01:45.395 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+8352 19:01:46.050 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Наушники
+8352 19:01:46.050 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+10241 19:01:47.939 [main] DEBUG t1.steps.CurrentSteps - Элемент Поиск по разделу: на странице Результаты поиска Amazon появился
+10242 19:01:47.940 [main] INFO  t1.steps.CurrentSteps - Сохранение переменной контекста
+10272 19:01:47.970 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: со страницы Результаты поиска Amazon сохранена
+10273 19:01:47.971 [main] INFO  t1.steps.CurrentSteps - Сравнение переменной из контекста с ожидаемым результатом
+10276 19:01:47.974 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: равна ожидаемому результату Audio Headphones
+10277 19:01:47.975 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+10330 19:01:48.028 [main] INFO  t1.framework.BrowserFactory - требуемый бренд найден
+10330 19:01:48.028 [main] INFO  t1.framework.BrowserFactory - пользователь кликает по бренду
+12168 19:01:49.866 [main] INFO  t1.steps.CurrentSteps - Элемент найден
+12168 19:01:49.866 [main] DEBUG t1.steps.CurrentSteps - Samsung найден на странице Результаты поиска Amazon
+12169 19:01:49.867 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+12219 19:01:49.917 [main] DEBUG t1.framework.BrowserFactory - Найден элемент Amazon's Choice
+SAMSUNG Galaxy Buds Live True Wireless Earbuds US Version Active Noise Cancelling Wireless Charging Case Included, Mystic Black
+24,779 из коллекции бренда Samsung
+12252 19:01:49.950 [main] DEBUG t1.framework.BrowserFactory - Найден элемент SAMSUNG Galaxy Buds Pro, Bluetooth Earbuds, True Wireless, Noise Cancelling, Charging Case, Quality Sound, Water Resistant, Phantom Black (US Version)
+21,105 из коллекции бренда Samsung
+12279 19:01:49.977 [main] DEBUG t1.framework.BrowserFactory - Найден элемент Samsung Galaxy Buds 2 True Wireless Earbuds Noise Cancelling Ambient Sound Bluetooth Lightweight Comfort Fit Touch Control US Version, Graphite
+7,307 из коллекции бренда Samsung
+12307 19:01:50.005 [main] DEBUG t1.framework.BrowserFactory - Найден элемент SAMSUNG EO-IC100BBEGUS Corded Type-C Earphones, Black
+9,363 из коллекции бренда Samsung
+12334 19:01:50.032 [main] DEBUG t1.framework.BrowserFactory - Найден элемент Samsung Galaxy Buds Plus, True Wireless Earbuds Bluetooth 5.0 (Wireless Charging Case Included), Black – US Version
+47,754 из коллекции бренда Samsung
+12365 19:01:50.063 [main] DEBUG t1.framework.BrowserFactory - Найден элемент SAMSUNG Corded Type-C Earphones, White (EO-IC100BWEGUS)
+1,991 из коллекции бренда Samsung
+12394 19:01:50.092 [main] ERROR t1.framework.BrowserFactory - Найден элемент AKG Noise Cancelling Headphones N60NC Wireless Bluetooth - Black - GP-N060HAHCAAA
+690 не из коллекции бренда Samsung

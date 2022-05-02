@@ -34,6 +34,9 @@ public class AmazonSearchInPage extends BasePage {
     private static final String AMAZONE_SEARCHIN_LOC = "//span[@id='nav-search-label-id']";
     private static final String BRANDS_COLLECTION_LOC = "//ul[@aria-labelledby='p_89-title']";
     private static final String BRANDS_COLLECTION_ITEM_LOC = "//ul[@aria-labelledby='p_89-title']/li";
+    private static final String ITEMS_COLLECTION_LOC = "//div[@class='s-main-slot s-result-list s-search-results sg-row']";
+    private static final String COLLECTION_ITEM_LOC = "//div[@data-component-type='s-search-result']";
+
 
     @FindBy(xpath = AMAZONE_SEARCHIN_LOC)
     WebElement searchIn;
@@ -44,10 +47,18 @@ public class AmazonSearchInPage extends BasePage {
     @FindBy(xpath = BRANDS_COLLECTION_ITEM_LOC)
     WebElement brandsItem;
 
+    @FindBy(xpath = ITEMS_COLLECTION_LOC)
+    WebElement itemsCollection;
+
+    @FindBy(xpath = COLLECTION_ITEM_LOC)
+    WebElement collectionItem;
+
     private List<BaseElement> elements = Arrays.asList(
             buildElementWithName(searchIn, "Поиск по разделу:",AMAZONE_SEARCHIN_LOC),
             buildElementWithName(brandsCollection, "Коллекция производителей",BRANDS_COLLECTION_LOC),
-            buildElementWithName(brandsItem, "Один из брендов",BRANDS_COLLECTION_ITEM_LOC)
+            buildElementWithName(brandsItem, "Один из брендов",BRANDS_COLLECTION_ITEM_LOC),
+            buildElementWithName(itemsCollection, "Коллекция предметов",ITEMS_COLLECTION_LOC),
+            buildElementWithName(collectionItem, "Предмет из коллекции",COLLECTION_ITEM_LOC)
     );
 
 }
