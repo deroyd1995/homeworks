@@ -1,8 +1,11 @@
 package t1.framework;
 
 import org.openqa.selenium.WebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Browser {
+    public static final Logger logger = LoggerFactory.getLogger(Browser.class);
     private static Browser browser;
     private static WebDriver webDriver;
     private BrowserFactory browserFactory = new BrowserFactory();
@@ -14,6 +17,7 @@ public class Browser {
     public static Browser getInstance() {
         if (browser == null) {
             browser = new Browser();
+            logger.info("webDriver был инициирован");
         }
         return browser;
     }

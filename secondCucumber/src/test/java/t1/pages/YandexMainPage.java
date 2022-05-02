@@ -25,6 +25,14 @@ public class YandexMainPage extends BasePage{
                 .orElseThrow(() -> new Error("На странице не найден элемент для наименования: " + elementName)).getWebElement();
     }
 
+    @Override
+    public String getElementXpath(String elementName) {
+        return elements.stream()
+                .filter(element -> element.getElementName().equals(elementName))
+                .findFirst()
+                .orElseThrow(() -> new Error("На странице не найден элемент для наименования: " + elementName)).getElementXpath();
+    }
+
     //Локаторы
     private static final String GLOBAL_INPUT_FIELD_SEL = ".mini-suggest__input";
     private static final String YANDEX_LOGO_LOC = "//div[@aria-label='Яндекс']";
@@ -83,11 +91,11 @@ public class YandexMainPage extends BasePage{
    
 
     private List<BaseElement> elements = Arrays.asList(
-            buildElementWithName(yandexLogo, "Яндекс картинки"),
-            buildElementWithName(searchButton, "Кнопка Поиск"),
-            buildElementWithName(searchInput, "Поле поиска"),
-            buildElementWithName(currentTemperature,"Текущая температура"),
-            buildElementWithName(resultList, "Список с результатами поиска"),
-            buildElementWithName(weather,"Погода")
+            buildElementWithName(yandexLogo, "Яндекс картинки",YANDEX_LOGO_LOC),
+            buildElementWithName(searchButton, "Кнопка Поиск",SEARCH_BUTTON_SEL),
+            buildElementWithName(searchInput, "Поле поиска",GLOBAL_INPUT_FIELD_SEL),
+            buildElementWithName(currentTemperature,"Текущая температура",CURRENT_TEMPERATURE_LOC),
+            buildElementWithName(resultList, "Список с результатами поиска",RESULT_LIST_LOC),
+            buildElementWithName(weather,"Погода",WEATHER_LOC)
     );
 }

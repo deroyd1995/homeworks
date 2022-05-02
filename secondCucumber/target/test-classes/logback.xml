@@ -6,11 +6,15 @@
             <pattern>%-4relative %d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n</pattern>
         </encoder>
     </appender>
-    <logger name="t1.steps.CurrentSteps" level="DEBUG" />
+    <logger name="t1.core.BaseElement" level="INFO" />
+    <logger name="t1.core.CucumberContext" level="INFO" />
+    <logger name="t1.core.PageCatalog" level="INFO" />
     <logger name="t1.framework.Browser" level="INFO" />
     <logger name="t1.framework.BrowserFactory" level="INFO" />
+    <logger name="t1.pages.AmazonMainPage" level="INFO" />
     <logger name="t1.pages.YandexWeatherPage" level="INFO" />
     <logger name="t1.pages.YandexMainPage" level="INFO" />
+    <logger name="t1.steps.CurrentSteps" level="DEBUG" />
     <root level="warn">
         <appender-ref ref="FILE" />
     </root>

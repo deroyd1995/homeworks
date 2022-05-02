@@ -16,6 +16,12 @@ public class BaseElement {
      */
     private WebElement webElement;
 
+
+    /**
+     * xpath элемента
+     */
+    private String xpath;
+
     public String getElementName() {
         return elementName;
     }
@@ -23,4 +29,6 @@ public class BaseElement {
     public WebElement getWebElement() {
         return webElement;
     }
+
+    public String getElementXpath(){return xpath;}
 }

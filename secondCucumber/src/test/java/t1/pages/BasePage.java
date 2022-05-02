@@ -25,10 +25,27 @@ public abstract class BasePage {
 
     public abstract WebElement getElementByName(String elementName);
 
+    public abstract String getElementXpath(String elementName);
+
     public BasePage() {
         this.webDriver = Browser.getInstance().getWebDriver();
         PageFactory.initElements(webDriver, this);
-        logger.info("webDriver был инициирован");
+    }
+
+    public boolean IsElementInCollection(WebElement collectionOfItems, String xpathItem, String name,String errorMessage) {
+        int countItems = Integer.parseInt(collectionOfItems.getDomProperty("childElementCount"));
+
+        if (countItems == 0){
+            fail(errorMessage);
+        }
+        String textItem = "";
+        for (int i=1;i<=countItems;i++){
+            textItem = webDriver.findElement(By.xpath(xpathItem+"["+i+"]")).getText();
+            if (textItem.equals(name)){
+                return true;
+            }
+        }
+        return false;
     }
 
     public boolean waitForElementNotPresent(WebElement element, String errorMessage, long timeoutInSeconds) {
@@ -156,10 +173,11 @@ public abstract class BasePage {
         return element;
     }
 
-    protected BaseElement buildElementWithName (WebElement element, String name){
+    protected BaseElement buildElementWithName (WebElement element, String name, String xpath){
         return BaseElement.builder()
                 .webElement(element)
                 .elementName(name)
+                .xpath(xpath)
                 .build();
     }
 }

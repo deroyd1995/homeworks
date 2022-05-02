@@ -23,6 +23,14 @@ public class YandexWeatherPage extends BasePage {
                 .orElseThrow(() -> new Error("На странице не найден элемент для наименования: " + elementName)).getWebElement();
     }
 
+    @Override
+    public String getElementXpath(String elementName) {
+        return elements.stream()
+                .filter(element -> element.getElementName().equals(elementName))
+                .findFirst()
+                .orElseThrow(() -> new Error("На странице не найден элемент для наименования: " + elementName)).getElementXpath();
+    }
+
     //METHODS
     public void getNextDayTemp(String day){
         Integer dayIndex = getDayIndex(day);

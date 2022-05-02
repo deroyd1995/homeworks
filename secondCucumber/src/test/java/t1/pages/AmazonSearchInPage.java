@@ -7,10 +7,10 @@ import t1.core.BaseElement;
 import java.util.Arrays;
 import java.util.List;
 
-public class YandexSearchResultPage extends BasePage {
+public class AmazonSearchInPage extends BasePage {
     @Override
     public String getPageName() {
-        return "Результаты поиска Яндекс";
+        return "Результаты поиска Amazon";
     }
 
     @Override
@@ -29,10 +29,25 @@ public class YandexSearchResultPage extends BasePage {
                 .orElseThrow(() -> new Error("На странице не найден элемент для наименования: " + elementName)).getElementXpath();
     }
 
-    @FindBy(xpath = "//div[@class='service service_name_search']/a/span")
-    WebElement searchTab;
+    //ЛОКАТОРЫ
+
+    private static final String AMAZONE_SEARCHIN_LOC = "//span[@id='nav-search-label-id']";
+    private static final String BRANDS_COLLECTION_LOC = "//ul[@aria-labelledby='p_89-title']";
+    private static final String BRANDS_COLLECTION_ITEM_LOC = "//ul[@aria-labelledby='p_89-title']/li";
+
+    @FindBy(xpath = AMAZONE_SEARCHIN_LOC)
+    WebElement searchIn;
+
+    @FindBy(xpath = BRANDS_COLLECTION_LOC)
+    WebElement brandsCollection;
+
+    @FindBy(xpath = BRANDS_COLLECTION_ITEM_LOC)
+    WebElement brandsItem;
 
     private List<BaseElement> elements = Arrays.asList(
-            buildElementWithName(searchTab, "Поиск","//div[@class='service service_name_search']/a/span")
+            buildElementWithName(searchIn, "Поиск по разделу:",AMAZONE_SEARCHIN_LOC),
+            buildElementWithName(brandsCollection, "Коллекция производителей",BRANDS_COLLECTION_LOC),
+            buildElementWithName(brandsItem, "Один из брендов",BRANDS_COLLECTION_ITEM_LOC)
     );
+
 }

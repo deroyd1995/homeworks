@@ -1,0 +1,43 @@
+2413 15:50:44.390 [main] INFO  t1.framework.Browser - webDriver был инициирован
+8426 15:50:50.403 [main] INFO  t1.steps.CurrentSteps - Пользователь вводит текст
+8427 15:50:50.404 [main] ERROR t1.framework.BrowserFactory - Не заполнен каталог страниц.
+2369 15:51:46.959 [main] INFO  t1.framework.Browser - webDriver был инициирован
+6129 15:51:50.719 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+7803 15:51:52.393 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главная страница Amazon кликнул на элемент Главное меню
+7807 15:51:52.397 [main] INFO  t1.steps.CurrentSteps - Пользователь проверяет, что элемент активен
+8850 15:51:53.440 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon удостоверился, что элемент Раздел электроники активен
+8851 15:51:53.441 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+8920 15:51:53.510 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Раздел электроники
+8921 15:51:53.511 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+8963 15:51:53.553 [main] DEBUG t1.steps.CurrentSteps - Элемент Результат поиска: электроника на странице Главное меню Amazon появился
+8963 15:51:53.553 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+9614 15:51:54.204 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Наушники
+9615 15:51:54.205 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+10402 15:51:54.992 [main] DEBUG t1.steps.CurrentSteps - Элемент Поиск по разделу: на странице Результаты поиска Amazon появился
+10403 15:51:54.993 [main] INFO  t1.steps.CurrentSteps - Сохранение переменной контекста
+11674 15:51:56.264 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: со страницы Результаты поиска Amazon сохранена
+11675 15:51:56.265 [main] INFO  t1.steps.CurrentSteps - Сравнение переменной из контекста с ожидаемым результатом
+11678 15:51:56.268 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: равна ожидаемому результату Audio Headphones
+12678 15:51:57.268 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+12716 15:51:57.306 [main] INFO  t1.steps.CurrentSteps - Элемент найден
+12716 15:51:57.306 [main] DEBUG t1.steps.CurrentSteps - Apple найден на странице Результаты поиска Amazon
+2392 15:52:42.809 [main] INFO  t1.framework.Browser - webDriver был инициирован
+7697 15:52:48.114 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+9409 15:52:49.826 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главная страница Amazon кликнул на элемент Главное меню
+9413 15:52:49.830 [main] INFO  t1.steps.CurrentSteps - Пользователь проверяет, что элемент активен
+10458 15:52:50.875 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon удостоверился, что элемент Раздел электроники активен
+10459 15:52:50.876 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+10531 15:52:50.948 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Раздел электроники
+10532 15:52:50.949 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+10575 15:52:50.992 [main] DEBUG t1.steps.CurrentSteps - Элемент Результат поиска: электроника на странице Главное меню Amazon появился
+10576 15:52:50.993 [main] INFO  t1.steps.CurrentSteps - Пользователь кликает на элемент
+11235 15:52:51.652 [main] DEBUG t1.steps.CurrentSteps - Пользователь на странице Главное меню Amazon кликнул на элемент Наушники
+11236 15:52:51.653 [main] INFO  t1.steps.CurrentSteps - Ожидание элемента на странице
+12159 15:52:52.576 [main] DEBUG t1.steps.CurrentSteps - Элемент Поиск по разделу: на странице Результаты поиска Amazon появился
+12160 15:52:52.577 [main] INFO  t1.steps.CurrentSteps - Сохранение переменной контекста
+12191 15:52:52.608 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: со страницы Результаты поиска Amazon сохранена
+12192 15:52:52.609 [main] INFO  t1.steps.CurrentSteps - Сравнение переменной из контекста с ожидаемым результатом
+12195 15:52:52.612 [main] DEBUG t1.steps.CurrentSteps - Переменная контекста текст поиск по: равна ожидаемому результату Audio Headphones
+13197 15:52:53.614 [main] INFO  t1.steps.CurrentSteps - Начинается поиск элемента на странице
+13761 15:52:54.178 [main] INFO  t1.steps.CurrentSteps - Элемент найден
+13761 15:52:54.178 [main] DEBUG t1.steps.CurrentSteps - Apple найден на странице Результаты поиска Amazon
