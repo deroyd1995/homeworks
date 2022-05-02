@@ -5,9 +5,11 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import t1.core.BaseElement;
 import t1.framework.Browser;
+import t1.framework.BrowserFactory;
 import t1.steps.CurrentSteps;
 
 import java.time.Duration;
@@ -15,9 +17,7 @@ import java.time.Duration;
 import static junit.framework.TestCase.fail;
 
 public abstract class BasePage {
-
-    private static final ch.qos.logback.classic.Logger logger
-            = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger(CurrentSteps.class);
+    public static final Logger logger = LoggerFactory.getLogger(BrowserFactory.class);
 
     protected WebDriver webDriver;
 

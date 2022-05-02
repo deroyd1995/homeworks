@@ -1,11 +1,18 @@
 package t1.pages;
 
+import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import t1.core.BaseElement;
 
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
+
+import static t1.steps.Conditions.DURATION;
 
 public class YandexMainPage extends BasePage{
 
@@ -31,6 +38,7 @@ public class YandexMainPage extends BasePage{
     private static final String RESULT_LIST_LOC = "//ul[@aria-label='Результаты поиска']";
     private static final String WEATHER_LOC = "//div[@class='weather__header']//a[text()='Погода']";
     private static final String CURRENT_TEMPERATURE_LOC = "//div[@class='weather__temp']";
+    public static final String MARKET_LOC = "//a[@data-id='market']";
 
     //Элементы
     @FindBy(xpath = YANDEX_LOGO_LOC)
@@ -51,74 +59,34 @@ public class YandexMainPage extends BasePage{
     @FindBy(xpath = WEATHER_LOC)
     WebElement weather;
 
-    // Cucumber именование элементов
+    @FindBy(xpath = MARKET_LOC)
+    WebElement market;
 
-//    private BaseElement aYandexPictures(){
-//        return BaseElement.builder()
-//                .webElement(yandexLogo)
-//                .elementName("Яндекс картинки")
-//                .build();
-//    }
-//
-//    private BaseElement aSearchBtn(){
-//        return BaseElement.builder()
-//                .webElement(searchButton)
-//                .elementName("Кнопка Поиск")
-//                .build();
-//    }
-//
-//    private BaseElement aSearchInput(){
-//        return BaseElement.builder()
-//                .webElement(searchInput)
-//                .elementName("Поле поиска")
-//                .build();
-//    }
-//
-//    private BaseElement aCurrentTemperature(){
-//        return BaseElement.builder()
-//                .webElement(currentTemperature)
-//                .elementName("Текущая температура")
-//                .build();
-//    }
-//
-//    private BaseElement aResultList(){
-//        return BaseElement.builder()
-//                .webElement(resultList)
-//                .elementName("Список с результатами поиска")
-//                .build();
-//    }
-//
-//    private BaseElement aWeather(){
-//        return BaseElement.builder()
-//                .webElement(weather)
-//                .elementName("Погода")
-//                .build();
-//    }
 
-    //
-    /*public void searchThemeWithYandex(String expression) {
-        Assertions.assertTrue(webDriver.findElement(By.xpath(YANDEX_LOGO_LOC)).isDisplayed());
 
-        webDriver.findElement(By.xpath(GLOBAL_INPUT_FIELD_LOC)).sendKeys(expression);
-        webDriver.findElement(By.xpath(FIND_BUTTON_LOC)).click();
+    //METHODS
+     public void goToPage(String pageName) throws InterruptedException {
+        if(pageName == "Маркет"){
+            logger.info("Начат переход на Яндекс.Маркет");
+            market.click();
+            for (String windowHandle : webDriver.getWindowHandles()){
+                webDriver.switchTo().window(windowHandle);
+            }
+        }
+        else if (pageName == "Погода"){
+            logger.info("Начат переход на Яндекс.Погода");
+            weather.click();
+            for (String windowHandle : webDriver.getWindowHandles()){
+                webDriver.switchTo().window(windowHandle);
+            }
+        }
+    }
 
-        WebElement firstResult = new WebDriverWait(webDriver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.elementToBeClickable(By.xpath(RESULT_LIST_LOC)));
-
-    }*/
-
-//    public void getCurrentTemperature() {
-//        String todayTemperature;
-//        todayTemperature = webDriver.findElement(By.xpath(CURRENT_TEMPERATURE_LOC)).getText();
-//        System.out.println("Today is " + todayTemperature);
-//    }
-//
-//    public void goToTemperatureForecast() {
-//        webDriver.findElement(By.xpath(WEATHER_LOC)).click();
-//        for (String windowHandle : webDriver.getWindowHandles()) {
-//            webDriver.switchTo().window(windowHandle);
-//        }
-//    }
+    public void getCurrentTemp (){
+        String todayTemperature = currentTemperature.getText();
+        System.out.println("Сегодня "+todayTemperature);
+    }
+   
 
     private List<BaseElement> elements = Arrays.asList(
             buildElementWithName(yandexLogo, "Яндекс картинки"),

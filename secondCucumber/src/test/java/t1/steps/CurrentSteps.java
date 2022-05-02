@@ -6,6 +6,8 @@ import lombok.SneakyThrows;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebElement;
 import org.slf4j.LoggerFactory;
+import t1.pages.YandexMainPage;
+import t1.pages.YandexWeatherPage;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
@@ -22,13 +24,6 @@ public class CurrentSteps {
     private static final ch.qos.logback.classic.Logger logger
             = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger(CurrentSteps.class);
 
-
-    /*@Дано("Выполняем запрос по теме {string}")
-    public void SecondScenarioTest(String theme) {
-        YandexMainPage yandexMainPage = new YandexMainPage();
-        yandexMainPage.searchThemeWithYandex(theme);
-        logger.info("Выполнен запрос по теме {}", theme);
-    }*/
 
     @Дано("пользователь на странице {string} сохраняет текст элемента {string} в переменную контекста {string}")
     public void findCurrentTemperatureTest(String pageName, String elementName, String param) {
@@ -86,6 +81,31 @@ public class CurrentSteps {
                 "Не найден элемент " + elementName);
         String innerHTMLText = element.getAttribute("innerHTML");
         if (innerHTMLText.contains("::after")){
+        }
+    }
+
+    @Дано("Перейти на страницу {string}")
+    public void goToPage(String page) throws InterruptedException {
+        YandexMainPage yandexMainPage = new YandexMainPage();
+        yandexMainPage.goToPage(page);
+        logger.info("Осуществлён переход на страницу '"+page+"'");
+    }
+
+    @Дано("Получить прогноз погоды на {string}")
+    public void getWeather(String day) throws InterruptedException {
+        if (day.equalsIgnoreCase("сегодня")){
+            logger.info("Запрошена погода на "+day);
+            YandexMainPage yandexMainPage = new YandexMainPage();
+            yandexMainPage.getCurrentTemp();
+            logger.info("Температура получена");
+        }
+        else {
+            logger.info("Запрошена погода на "+day);
+            YandexMainPage yandexMainPage = new YandexMainPage();
+            yandexMainPage.goToPage("Погода");
+            YandexWeatherPage yandexWeatherPage = new YandexWeatherPage();
+            yandexWeatherPage.getNextDayTemp(day);
+            logger.info("Температура получена");
         }
     }
 

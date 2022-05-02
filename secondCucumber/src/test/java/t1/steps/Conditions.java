@@ -7,6 +7,7 @@ import t1.core.PageCatalog;
 import t1.framework.Browser;
 
 public class Conditions {
+    public static final int DURATION = 15; //время ожидания, сек
     private static final String baseURL = "https://yandex.ru";
 
     public static WebDriver driver = Browser.getInstance().getWebDriver();
