@@ -7,7 +7,7 @@ import t1.core.BaseElement;
 import java.util.Arrays;
 import java.util.List;
 
-public class SearchResultPage extends BasePage {
+public class YandexSearchResultPage extends BasePage {
     @Override
     public String getPageName() {
         return "Результаты поиска";

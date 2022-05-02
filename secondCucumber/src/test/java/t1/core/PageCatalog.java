@@ -2,7 +2,7 @@ package t1.core;
 
 import org.openqa.selenium.WebElement;
 import t1.pages.BasePage;
-import t1.pages.SearchResultPage;
+import t1.pages.YandexSearchResultPage;
 import t1.pages.YandexMainPage;
 import t1.pages.YandexWeatherPage;
 
@@ -15,7 +15,7 @@ public class PageCatalog extends BasePage {
     public final List<BasePage> pageCatalog = Arrays.asList(
             new YandexMainPage(),
             new YandexWeatherPage(),
-            new SearchResultPage()
+            new YandexSearchResultPage()
     );
 
     public BasePage getPageByName(String pageName) {

@@ -28,6 +28,7 @@ public abstract class BasePage {
     public BasePage() {
         this.webDriver = Browser.getInstance().getWebDriver();
         PageFactory.initElements(webDriver, this);
+        logger.info("webDriver был инициирован");
     }
 
     public boolean waitForElementNotPresent(WebElement element, String errorMessage, long timeoutInSeconds) {
@@ -149,7 +150,9 @@ public abstract class BasePage {
 
     public WebElement waitForElementAndSendKeys(WebElement locator, String value, String errorMessage) {
         WebElement element = waitForElementPresent(locator, errorMessage, 5);
+        logger.info(String.format("Элемент: %s найден на странице", element));
         element.sendKeys(value);
+        logger.info(String.format("Элемент: %s выражение было записано в %s", value,element));
         return element;
     }
 

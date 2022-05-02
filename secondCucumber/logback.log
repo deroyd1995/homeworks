@@ -1,0 +1,30 @@
+5299 09:41:35.775 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+5313 09:41:35.789 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+5314 09:41:35.790 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+5314 09:41:35.790 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+5381 09:41:35.857 [main] INFO  t1.framework.BrowserFactory - Элемент: [[ChromeDriver: chrome on WINDOWS (ff223b35f1018374d23eaa4f8f20bb16)] -> css selector: .mini-suggest__input] найден на странице
+5434 09:41:35.910 [main] INFO  t1.framework.BrowserFactory - Элемент: привет выражение было записано в [[ChromeDriver: chrome on WINDOWS (ff223b35f1018374d23eaa4f8f20bb16)] -> css selector: .mini-suggest__input]
+4639 09:42:58.392 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+4655 09:42:58.408 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+4656 09:42:58.409 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+4657 09:42:58.410 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+4718 09:42:58.471 [main] INFO  t1.framework.BrowserFactory - Элемент: [[ChromeDriver: chrome on WINDOWS (079269a554e7475c0e7c03334f012876)] -> css selector: .mini-suggest__input] найден на странице
+4768 09:42:58.521 [main] INFO  t1.framework.BrowserFactory - Элемент: привет выражение было записано в [[ChromeDriver: chrome on WINDOWS (079269a554e7475c0e7c03334f012876)] -> css selector: .mini-suggest__input]
+6619 09:46:07.479 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+6635 09:46:07.495 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+6636 09:46:07.496 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+6636 09:46:07.496 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+6694 09:46:07.554 [main] INFO  t1.framework.BrowserFactory - Элемент: [[ChromeDriver: chrome on WINDOWS (e72308005e0e5be99f4d10db706aac50)] -> css selector: .mini-suggest__input] найден на странице
+6750 09:46:07.610 [main] INFO  t1.framework.BrowserFactory - Элемент: привет выражение было записано в [[ChromeDriver: chrome on WINDOWS (e72308005e0e5be99f4d10db706aac50)] -> css selector: .mini-suggest__input]
+4911 09:47:46.751 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+4925 09:47:46.765 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+4926 09:47:46.766 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+4926 09:47:46.766 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+4997 09:47:46.837 [main] INFO  t1.framework.BrowserFactory - Элемент: [[ChromeDriver: chrome on WINDOWS (eaf28d2a0fc1f858fb0600f7004a8d8a)] -> css selector: .mini-suggest__input] найден на странице
+5155 09:47:46.995 [main] INFO  t1.framework.BrowserFactory - Элемент: привет выражение было записано в [[ChromeDriver: chrome on WINDOWS (eaf28d2a0fc1f858fb0600f7004a8d8a)] -> css selector: .mini-suggest__input]
+4543 09:48:34.738 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+4561 09:48:34.756 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+4562 09:48:34.757 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+4563 09:48:34.758 [main] INFO  t1.framework.BrowserFactory - webDriver был инициирован
+4622 09:48:34.817 [main] INFO  t1.framework.BrowserFactory - Элемент: [[ChromeDriver: chrome on WINDOWS (35600c2b7681d2dc6c2b13d58dfba1db)] -> css selector: .mini-suggest__input] найден на странице
+4680 09:48:34.875 [main] INFO  t1.framework.BrowserFactory - Элемент: привет выражение было записано в [[ChromeDriver: chrome on WINDOWS (35600c2b7681d2dc6c2b13d58dfba1db)] -> css selector: .mini-suggest__input]
