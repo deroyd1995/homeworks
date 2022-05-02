@@ -3,7 +3,6 @@ package t1.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import t1.core.BaseElement;
 
 import java.util.Arrays;
@@ -13,7 +12,7 @@ public class YandexWeatherPage extends BasePage {
 
     @Override
     public String getPageName() {
-        return "Страница погоды";
+        return "Страница погоды Яндекс";
     }
 
     @Override

@@ -10,7 +10,7 @@ import java.util.List;
 public class YandexSearchResultPage extends BasePage {
     @Override
     public String getPageName() {
-        return "Результаты поиска";
+        return "Результаты поиска Яндекс";
     }
 
     @Override

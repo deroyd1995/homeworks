@@ -20,10 +20,10 @@ import static t1.steps.Conditions.driver;
 import static t1.steps.Conditions.pageCatalog;
 
 public class CurrentSteps {
+    public static String baseURL = "";
 
     private static final ch.qos.logback.classic.Logger logger
             = (ch.qos.logback.classic.Logger) LoggerFactory.getLogger(CurrentSteps.class);
-
 
     @Дано("пользователь на странице {string} сохраняет текст элемента {string} в переменную контекста {string}")
     public void findCurrentTemperatureTest(String pageName, String elementName, String param) {

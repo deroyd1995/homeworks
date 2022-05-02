@@ -11,11 +11,14 @@ import java.util.List;
 
 public class PageCatalog extends BasePage {
 
-
     public final List<BasePage> pageCatalog = Arrays.asList(
+           /*
             new YandexMainPage(),
             new YandexWeatherPage(),
             new YandexSearchResultPage()
+            */
+
+
     );
 
     public BasePage getPageByName(String pageName) {
@@ -25,11 +28,6 @@ public class PageCatalog extends BasePage {
                 }
             }
         throw new Error("Не заполнен каталог страниц.");
-
-//        return pageCatalog.stream()
-//                .filter(page -> page.getPageName().equals(pageName))
-//                .findFirst()
-//                .orElseThrow(() -> new Error("Не найдена страница с наименованием: " + pageName));
     }
 
     @Override
